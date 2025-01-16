@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HelloWorld from './HelloWorld.jsx'
 import FunctionalComponent from './FunctionalComponent.jsx'
+import ClassComponent from './ClassComponent.jsx'
 
 
 export class App extends Component {
@@ -13,6 +14,7 @@ export class App extends Component {
       <div>
         <HelloWorld></HelloWorld>
         <FunctionalComponent details={data}></FunctionalComponent>
+        <ClassComponent details={data}></ClassComponent>
       </div>
     )
   }
