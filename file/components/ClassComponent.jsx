@@ -17,13 +17,13 @@ export class ClassComponent extends Component {
                         <th>Location</th>
                     </tr>
                     {
-                        this.props.details.map((data) => (
+                        this.props.data.map((employee) => (
                             <tr>
-                                <td>{data.id}</td>
-                                <td>{data.name}</td>
-                                <td>{data.phone}</td>
-                                <td>{data.salary}</td>
-                                <td>{data.location}</td>
+                                <td>{employee.id}</td>
+                                <td>{employee.name}</td>
+                                <td>{employee.phone}</td>
+                                <td>{employee.salary}</td>
+                                <td>{employee.location}</td>
                             </tr>
                         ))
                     }
