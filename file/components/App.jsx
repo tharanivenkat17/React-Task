@@ -15,7 +15,7 @@ function App() {
           <Demo name="Siva"></Demo> */}
           {/* <SignUpForm></SignUpForm> */}
           {/* <Button></Button> */}
-          {/* <SignUpForm></SignUpForm> */}
+          <SignUpForm></SignUpForm>
           <Uncontrolled></Uncontrolled>
 
         </div>

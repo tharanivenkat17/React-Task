@@ -25,15 +25,20 @@ const SignUpForm = () => {
         const namePattern = /^[a-zA-Z]{4,}$/;
         if (!namePattern.test(field['username'])) { // Corrected to 'username'
             formValid = false;
-            error['username'] = 'Username must be at least 4 characters long';
+            error['username'] = 'Name must be characters';
         }
 
-        const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$/;
+        const emailPattern = /^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,8}$/;
         if (!emailPattern.test(field['email'])) {
             formValid = false;
             error['email'] = 'Please enter a valid email address';
         }
 
+        // (?=.*[a-z]) (At least one lowercase letter)
+        // (?=.*[A-Z]) (At least one uppercase letter)
+        // (?=.*\d) (At least one digit)
+        // (?=.*[!@#$%^&*]) (At least one special character)
+        // [A-Za-z\d!@#$%^&*]{7,} (Valid characters and length)
         const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{7,}$/;
         if (!passwordPattern.test(field['password'])) {
             formValid = false;
