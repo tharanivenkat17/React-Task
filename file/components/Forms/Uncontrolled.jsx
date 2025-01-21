@@ -13,21 +13,18 @@ const Uncontrolled = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Name field: Required
     if (!nameRef.current.value) {
       newErrors.name = "Name is required";
     } else if (!/^[A-Za-z]+$/.test(nameRef.current.value)) {
       newErrors.name = "Please enter only alphabets";
     }
 
-    // Email field: Required and valid format
     if (!emailRef.current.value) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(emailRef.current.value)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    // Password field: Required and minimum length
     if (!passwordRef.current.value) {
       newErrors.password = "Password is required";
     } else if (passwordRef.current.value.length < 6) {
@@ -35,7 +32,7 @@ const Uncontrolled = () => {
     }
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    return Object.keys(newErrors).length === 0;
   };
 
   // Handle form submission
@@ -62,18 +59,18 @@ const Uncontrolled = () => {
       <table>
         <tbody>
           <tr>
-            <td><label>Enter Name:</label></td>
-            <td><input type="text" className="border" ref={nameRef} /></td>
+            <td><label>Name</label></td>
+            <td><input type="text" placeholder='Enter Name' ref={nameRef} /></td>
             <td>{errors.name && <span>{errors.name}</span>}</td>
           </tr>
           <tr>
-            <td><label>Email:</label></td>
-            <td><input type="email" className="border" ref={emailRef} /></td>
+            <td><label>Email</label></td>
+            <td><input type="email" placeholder='Enter Email' ref={emailRef} /></td>
             <td>{errors.email && <span>{errors.email}</span>}</td>
           </tr>
           <tr>
-            <td><label>Password:</label></td>
-            <td><input type="password" className="border" ref={passwordRef} /></td>
+            <td><label>Password</label></td>
+            <td><input type="password" placeholder='Enter Password' ref={passwordRef} /></td>
             <td>{errors.password && <span>{errors.password}</span>}</td>
           </tr>
           <tr>

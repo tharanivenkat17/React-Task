@@ -81,67 +81,69 @@ const SignUpForm = () => {
             <h1>Controlled Forms</h1>
 
             <form onSubmit={submitForm} name="form" method='post'>
-                <div className='Flex'>
-                    <label htmlFor="username">Username</label>
-                    <input
-                        type="text"
-                        className="border"
-                        name="username"
-                        id='username'
-                        value={userFields.username}
-                        placeholder='Enter Username'
-                        onChange={handleChange}
-                        required
-                    />
-                    <span>{errorFields.username}</span>
-                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label htmlFor="username">Name</label></td>
+                            <td><input
+                                type="text"
+                                name="username"
+                                id='username'
+                                value={userFields.username}
+                                placeholder='Enter Username'
+                                onChange={handleChange}
+                                required
+                            />
+                            </td>
+                            <td><span style={{ color: "red" }}>{errorFields.username}</span></td>
+                        </tr>
+                        <tr>
+                            <td><label htmlFor="email">Email Id</label></td>
+                            <td><input
+                                type="text"
+                                name="email"
+                                id='email'
+                                value={userFields.email}
+                                placeholder='Enter Email'
+                                onChange={handleChange}
+                                required
+                            /></td>
+                            <td><span style={{ color: "red" }}>{errorFields.email}</span></td>
+                        </tr>
+                        <tr>
+                            <td><label htmlFor="password">Password</label></td>
+                            <td><input
+                                type="password"
+                                name="password"
+                                id='password'
+                                value={userFields.password}
+                                placeholder='Enter Password'
+                                onChange={handleChange}
+                                required
+                            /></td>
+                            <td><span style={{ color: "red" }}>{errorFields.password}</span></td>
+                        </tr>
 
-                <div className='Flex'>
-                    <label htmlFor="email">Email Id</label>
-                    <input
-                        type="text"
-                        className="border"
-                        name="email"
-                        id='email'
-                        value={userFields.email}
-                        placeholder='Enter Email'
-                        onChange={handleChange}
-                        required
-                    />
-                    <span>{errorFields.email}</span>
-                </div>
+                        <tr>
+                            <td><label htmlFor="confirmpassword">Confirm Password</label></td>
+                            <td><input
+                                type="password"
+                                name="confirmpassword"
+                                id='confirmpassword'
+                                value={userFields.confirmpassword}
+                                placeholder='Confirm Password'
+                                onChange={handleChange}
+                                required
+                            /></td>
+                            <td><span style={{ color: "red" }}>{errorFields.confirmpassword}</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type='submit' value=" Submit " /></td>
+                        </tr>
 
-                <div className='Flex'>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        className="border"
-                        name="password"
-                        id='password'
-                        value={userFields.password}
-                        placeholder='Enter Password'
-                        onChange={handleChange}
-                        required
-                    />
-                    <span>{errorFields.password}</span>
-                </div>
-
-                <div className='Flex'>
-                    <label htmlFor="confirmpassword">Confirm Password</label>
-                    <input
-                        type="password"
-                        className="border"
-                        name="confirmpassword"
-                        id='confirmpassword'
-                        value={userFields.confirmpassword}
-                        placeholder='Confirm Password'
-                        onChange={handleChange}
-                        required
-                    />
-                    <span>{errorFields.confirmpassword}</span>
-                </div>
-
-                <input className="submit" type='submit' value=" Submit " />
+                    </tbody>
+                </table>
             </form>
         </div>
     );

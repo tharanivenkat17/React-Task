@@ -2,6 +2,9 @@ import React from 'react'
 import Button from './Button.jsx'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
+import PropDrilling from './PropDrilling.jsx'
+import Context from './Context.jsx'
+import Effect from './Effect.jsx'
 
 function App() {
     // const employee = [
@@ -10,14 +13,15 @@ function App() {
     // ]
       return (
         <div>
-          {/* <FunctionalComponent details={employee}></FunctionalComponent>
-          <ClassComponent data={employee}></ClassComponent>
-          <Demo name="Siva"></Demo> */}
-          {/* <SignUpForm></SignUpForm> */}
-          {/* <Button></Button> */}
+          {/* <FunctionalComponent details={employee}></FunctionalComponent> */}
+          {/* <ClassComponent data={employee}></ClassComponent> */}
+          {/* <Demo name="Siva"></Demo> */}
+          <Button></Button>
           <SignUpForm></SignUpForm>
           <Uncontrolled></Uncontrolled>
-
+          <PropDrilling></PropDrilling>
+          <Context></Context>
+          <Effect></Effect>
         </div>
   )
 }
