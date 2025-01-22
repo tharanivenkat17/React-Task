@@ -2,9 +2,12 @@ import React from 'react'
 import Button from './Button.jsx'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
-import PropDrilling from './PropDrilling.jsx'
-import Context from './Context.jsx'
-import Effect from './Effect.jsx'
+import PropDrilling from './Hooks/PropDrilling.jsx'
+import Context from './Hooks/Context.jsx'
+import Effect from './Hooks/Effect.jsx'
+import Ref from './Hooks/Ref.jsx'
+import ButtonClick from './ButtonClick.jsx'
+import FormHOC from './FormHOC.jsx'
 
 function App() {
     // const employee = [
@@ -16,12 +19,15 @@ function App() {
           {/* <FunctionalComponent details={employee}></FunctionalComponent> */}
           {/* <ClassComponent data={employee}></ClassComponent> */}
           {/* <Demo name="Siva"></Demo> */}
-          <Button></Button>
+          {/* <Ref></Ref> */}
+          {/* <Button></Button>
           <SignUpForm></SignUpForm>
           <Uncontrolled></Uncontrolled>
           <PropDrilling></PropDrilling>
           <Context></Context>
-          <Effect></Effect>
+          <Effect></Effect> */}
+          <ButtonClick></ButtonClick>
+          <FormHOC></FormHOC>
         </div>
   )
 }
