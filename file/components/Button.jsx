@@ -9,11 +9,11 @@ function Button() {
   }
 
   return (
-    <div> <button onClick={()=>{alert("Hello")}}>Button</button>
+    <> <button onClick={()=>{alert("Hello")}}>Button</button>
     
     <button onClick={change}>click {index}</button>
     
-    </div>
+    </>
   )
 }
 

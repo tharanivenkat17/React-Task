@@ -8,13 +8,15 @@ const FormHOC = ({ formData, errors, onChange, onSubmit }) => {
                 <tbody>
                     <tr>
                         <td><label>Name:</label></td>
-                        <td><input
+                        <td>
+                            <input
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={onChange}
-                        /></td>
-                        <td>{errors.name && <p>{errors.name}</p>}</td>
+                            />
+                        </td>
+                        <td><span style={{ color: "red" }}>{errors.name}</span></td>
                     </tr>
                     <tr>
                         <td><label>Email:</label></td>
@@ -26,7 +28,7 @@ const FormHOC = ({ formData, errors, onChange, onSubmit }) => {
                                 onChange={onChange}
                             />
                         </td>
-                        <td>{errors.email && <p>{errors.email}</p>}</td>
+                        <td><span style={{ color: "red" }}>{errors.email}</span></td>
                     </tr>
                     <tr>
                         <td><label>Password:</label></td>
@@ -38,11 +40,11 @@ const FormHOC = ({ formData, errors, onChange, onSubmit }) => {
                                 onChange={onChange}
                             />
                         </td>
-                        <td>{errors.password && <p>{errors.password}</p>}</td>
+                        <td><span style={{ color: "red" }}>{errors.password}</span></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type="submit">Submit</button></td>
+                        <td><button type="submit" style={{ color: "blue", backgroundColor: "bisque" }}>Submit</button></td>
                     </tr>
                 </tbody>
             </table>

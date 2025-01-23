@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FormValidationHOC = (WrappedComponent) => {
+const FormValidationHOC = (HOCComponent) => {
   return (props) => {
     const [formData, setFormData] = useState({
       name: '',
@@ -71,7 +71,7 @@ const FormValidationHOC = (WrappedComponent) => {
     };
 
     return (
-      <WrappedComponent
+      <HOCComponent
         {...props}
         formData={formData}
         errors={errors}
