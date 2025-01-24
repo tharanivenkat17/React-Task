@@ -55,8 +55,9 @@ const Uncontrolled = () => {
 
   return (
     <form onSubmit={handleSubmit} name="form" method='post'>
+      <h1>UnControlled Form</h1>
       <br />
-      <table>
+      <table style={{marginLeft:"450px", textAlign:"left"}}>
         <tbody>
           <tr>
             <td><label>Name</label></td>

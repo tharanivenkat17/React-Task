@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import Button from './Button.jsx'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
@@ -11,8 +11,12 @@ import FormHOC from './FormHOC.jsx'
 import LazyLoading from './LazyLoading.jsx'
 import ErrorBoundaries from './ErrorBoundaries.jsx'
 import { ErrorBoundary } from 'react-error-boundary'
+import MessageError from './MessageError.jsx'
 
-// const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
+const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
+
+//////////////////////////  resetErrorBoundary //////////////////////
+
 const ErrorFallBack =({error,resetErrorBoundary})=>{
   return(
     <>
@@ -22,27 +26,56 @@ const ErrorFallBack =({error,resetErrorBoundary})=>{
     </>
   )
 }
-const [message, setMessage] = useState("")
-  function handleSubmit(payload){
-    setMessage(payload);
-  }
+
+
+//////////////////////// state recovery using resetErrorBoundary /////////////////////////////
+
+function ErrorFallBackState({ error, resetErrorBoundary }) {
+  return (
+      <div role="alert" style={{ color: "red" }}>
+          <h2>Something went wrong!</h2>
+          <p>{error.message}</p>
+          <button onClick={resetErrorBoundary}>Try Again</button>
+      </div>
+  );
+}
+
+
 function App() {
 
-  
+//////////////////////// state recovery using resetErrorBoundary /////////////////////////////
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = (newMessage) => {
+    setMessage(newMessage);
+  }
     // const employee = [
     //   { id: 12345, name: 'Siva', phone: 7418876453, salary: 30000, location: 'Chennai' },
     //   { id: 12234, name: 'Arun', phone: 7418337656, salary: 30000, location: 'Delhi' }
     // ]
       return (
-        <div>
-          {/*  ResetErrorBoundary */}
-          {/* <ErrorBoundary FallbackComponent={ErrorFallBack}> 
+        <div style={{textAlign:"center"}}>
+          {/*            state recovery using resetErrorBoundary            */}
+          <h1>state recovery using resetErrorBoundary</h1>
+          <h2>Do not type "crash"</h2>
+          <h3>{message}</h3>
+          <div>
+            <ErrorBoundary FallbackComponent={ErrorFallBackState}>
+              <MessageError message={message} onSubmit={handleSubmit} />
+            </ErrorBoundary>
+          </div>
+          <br />
+
+          {/*             resetErrorBoundary          */}
+          <h1>resetErrorBoundary</h1>
+          <ErrorBoundary FallbackComponent={ErrorFallBack}> 
           <ErrorBoundaries></ErrorBoundaries>
-          </ErrorBoundary>*/}
+          </ErrorBoundary>
+          <br />
 
-
-          {/* fallbackRender */}
-          {/* <ErrorBoundary fallbackRender={({error,resetErrorBoundary}) =>{
+          {/*             fallbackRender               */}
+          <h1>fallbackRender</h1>
+          <ErrorBoundary fallbackRender={({error,resetErrorBoundary}) =>{
             return(
               <>
                 <p>Something went wrong!</p>
@@ -51,42 +84,34 @@ function App() {
               </>
             )
           }}>
-          <ErrorBoundaries></ErrorBoundaries>
-          </ErrorBoundary> */}
+            <ErrorBoundaries></ErrorBoundaries>
+          </ErrorBoundary>
 
-
-
-          {/*  state recovery */}
-        
-            <h1>Do not type "crash"</h1>
-            <h2>{message}</h2>
-            <>
-              <ErrorBoundary FallbackComponent={ErrorFallBack}>
-                  <ErrorBoundaries></ErrorBoundaries>
-              </ErrorBoundary>
-            </>
-        
-          
-
-
-          {/* <FunctionalComponent details={employee}></FunctionalComponent> */}
-          {/* <ClassComponent data={employee}></ClassComponent> */}
+          <br />
+          {/* <FunctionalComponent details={employee}></FunctionalComponent>
+          <ClassComponent data={employee}></ClassComponent> */}
           {/* <Demo name="Siva"></Demo> */}
-          {/* <Ref></Ref> */}
-          {/* <Button></Button>
+
+          {/*                   FORMS                  */}
           <SignUpForm></SignUpForm>
           <Uncontrolled></Uncontrolled>
+
+          {/*                   HOOKS                  */}
+          <Ref></Ref>
           <PropDrilling></PropDrilling>
           <Context></Context>
-          <Effect></Effect> */}
-          {/* <ButtonClick></ButtonClick>
+          <Effect></Effect> 
+
+          {/*               HIGHER ORDER COMPONENT         */}
+          <ButtonClick></ButtonClick>
           <FormHOC></FormHOC>
+
+          {/*             LazyLoadingComponent         */}
           <Suspense fallback={<div>Loading...</div>}>
             <LazyLoadingComponent></LazyLoadingComponent>
-          </Suspense> */}
-          
-          
-          
+          </Suspense>
+          {/*            BUTTON and FRAGMENT           */}
+          <Button></Button>
         </div>
   )
 }

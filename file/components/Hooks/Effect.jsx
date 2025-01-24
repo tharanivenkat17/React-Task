@@ -18,6 +18,7 @@ export default function Effect() {
 
   return (
     <div>
+      <h1>Use Effect</h1>
         <p>Count 1 : {count1}</p>
         <p>Count 2 : {count2}</p>
         <button onClick={()=> setCount1(count1 +1 )}> Increse 1</button>

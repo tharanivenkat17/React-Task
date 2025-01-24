@@ -79,7 +79,7 @@ const SignUpForm = () => {
     return (
         <div>
             <h1>Controlled Forms</h1>
-            <form onSubmit={submitForm} name="form" method='post'>
+            <form  style={{marginLeft:"450px", textAlign:"left"}} onSubmit={submitForm} name="form" method='post'>
                 <table>
                     <tbody>
                         <tr>

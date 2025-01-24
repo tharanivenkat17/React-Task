@@ -23,6 +23,7 @@ export default function Ref() {
     },[input])
   return (
     <div>
+      <h1>Use Ref</h1>
         {/* No rendering */}
         {/* <h1>Count {count}</h1>
         <h1>Count Ref {countRef.current}</h1>

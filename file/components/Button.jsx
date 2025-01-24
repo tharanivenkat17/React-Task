@@ -9,7 +9,10 @@ function Button() {
   }
 
   return (
-    <> <button onClick={()=>{alert("Hello")}}>Button</button>
+
+    <> 
+    <h1>Button</h1>
+    <button onClick={()=>{alert("Hello")}}>Button</button>
     
     <button onClick={change}>click {index}</button>
     
