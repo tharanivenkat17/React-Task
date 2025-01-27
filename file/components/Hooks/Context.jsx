@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react'
 
 const ValueContext = createContext()
 export default function Context() {
-    const [text] = useState('React')
+    const [text,setText] = useState('React')
     return (
         <div>
             <h1>Use Context</h1>
@@ -11,7 +11,7 @@ export default function Context() {
             <ValueContext.Provider value={text} >
             <Component1  />
             </ValueContext.Provider>
-                
+            
         </div>
     )
 }
