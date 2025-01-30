@@ -14,6 +14,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 import MessageError from './MessageError.jsx'
 import Memo from './Optimization/Memo.jsx'
 import Callback from './Optimization/Callback.jsx'
+import CustomHook from './Hooks/CustomHook.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -51,6 +52,7 @@ function App() {
   // const handleSubmit = (newMessage) => {
   //   setMessage(newMessage);
   // }
+
     // const employee = [
     //   { id: 12345, name: 'Siva', phone: 7418876453, salary: 30000, location: 'Chennai' },
     //   { id: 12234, name: 'Arun', phone: 7418337656, salary: 30000, location: 'Delhi' }
@@ -62,18 +64,20 @@ function App() {
           <h2>Do not type "crash"</h2>
           <h3>{message}</h3>
           <div>
-            <ErrorBoundary FallbackComponent={ErrorFallBackState}>
+            <ErrorBoundary FallbackComponent={ErrorFallBackState} 
+            onReset={() => setMessage("")}
+            >
               <MessageError message={message} onSubmit={handleSubmit} />
             </ErrorBoundary>
-          </div>
-          <br /> */}
+          </div> */}
+          {/* <br /> */}
 
-          {/*             resetErrorBoundary          */}
+          {/*             Fallback          */}
           {/* <h1>resetErrorBoundary</h1>
           <ErrorBoundary FallbackComponent={ErrorFallBack}> 
-          <ErrorBoundaries></ErrorBoundaries>
-          </ErrorBoundary> */}
-          <br />
+          <ErrorBoundaries/>
+          </ErrorBoundary>
+          <br /> */}
 
           {/*             fallbackRender               */}
           {/* <h1>fallbackRender</h1>
@@ -86,7 +90,7 @@ function App() {
               </>
             )
           }}>
-            <ErrorBoundaries></ErrorBoundaries>
+            <ErrorBoundaries/>
           </ErrorBoundary> */}
 
           <br />
@@ -95,31 +99,33 @@ function App() {
           {/* <Demo name="Siva"></Demo> */}
 
           {/*                   FORMS                  */}
-          {/* <SignUpForm></SignUpForm>
-          <Uncontrolled></Uncontrolled> */}
+          {/* <SignUpForm/>
+          <Uncontrolled/> */}
 
           {/*                   HOOKS                  */}
-          {/* <Ref></Ref>
-          <PropDrilling></PropDrilling>
-          <Context></Context>
-          <Effect></Effect>  */}
+          {/* <Ref/>
+          <PropDrilling/>
+          <Context/>
+          <Effect/>  */}
 
           {/*               HIGHER ORDER COMPONENT         */}
-          {/* <ButtonClick></ButtonClick>
-          <FormHOC></FormHOC> */}
+          {/* <ButtonClick/>
+          <FormHOC/> */}
 
           {/*             LazyLoadingComponent         */}
           {/* <Suspense fallback={<div>Loading...</div>}>
-            <LazyLoadingComponent></LazyLoadingComponent>
+            <LazyLoadingComponent/>
           </Suspense> */}
 
           {/*            BUTTON and FRAGMENT           */}
-          {/* <Button></Button> */}
+          {/* <Button/> */}
 
           {/*             Optimizing Performance           */}
-          {/* <Memo></Memo>
-          <Callback></Callback> */}
+          {/* <Memo/>
+          <Callback/> */}
 
+          {/*             Render Props            */}
+          {/* <CustomHook /> */}
           
         </div>
   )
