@@ -16,6 +16,7 @@ import Memo from './Optimization/Memo.jsx'
 import Callback from './Optimization/Callback.jsx'
 import CustomHook from './Hooks/CustomHook.jsx'
 import Profilers from './Profilers.jsx'
+import Withoutjsx from './Withoutjsx.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -129,11 +130,13 @@ function App() {
           {/* <CustomHook /> */}
 
           {/*             Profiler            */}
-          <Profilers />
+          {/* <Profilers /> */}
+
+          {/*             Without JSX            */}
+          <Withoutjsx />
           
         </div>
   )
 }
 
 export default App
-
