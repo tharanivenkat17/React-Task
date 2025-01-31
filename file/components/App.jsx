@@ -1,20 +1,21 @@
 import React, { Suspense, useState } from 'react'
-import Button from './Button.jsx'
+import Button from './Sample/Button.jsx'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
 import PropDrilling from './Hooks/PropDrilling.jsx'
 import Context from './Hooks/Context.jsx'
 import Effect from './Hooks/Effect.jsx'
 import Ref from './Hooks/Ref.jsx'
-import ButtonClick from './ButtonClick.jsx'
-import FormHOC from './FormHOC.jsx'
+import ButtonClick from './HOC/ButtonClick.jsx'
+import FormHOC from './HOC/FormHOC.jsx'
 import LazyLoading from './LazyLoading.jsx'
-import ErrorBoundaries from './ErrorBoundaries.jsx'
+import ErrorBoundaries from './ErrorBoundary/ErrorBoundaries.jsx'
 import { ErrorBoundary } from 'react-error-boundary'
-import MessageError from './MessageError.jsx'
+import MessageError from './ErrorBoundary/MessageError.jsx'
 import Memo from './Optimization/Memo.jsx'
 import Callback from './Optimization/Callback.jsx'
 import CustomHook from './Hooks/CustomHook.jsx'
+import Profilers from './Profilers.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -126,6 +127,9 @@ function App() {
 
           {/*             Render Props            */}
           {/* <CustomHook /> */}
+
+          {/*             Profiler            */}
+          <Profilers />
           
         </div>
   )
