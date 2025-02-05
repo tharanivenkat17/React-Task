@@ -12,14 +12,14 @@ function Memo() {
   console.log("Rendering component");
 
   return (
-    <div>
+    <>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
       <p>Count: {count}</p>
       <p>Memoized value (count * 2): {memoizedValue}</p>
 
       <button onClick={() => setCount1(count1 + 1)}>Increment Count Without Memo</button>
       <p>Count1: {count1}</p>
-    </div>
+    </>
   );
 }
 

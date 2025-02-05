@@ -13,9 +13,9 @@ class ClassUnmounting extends Component {
   render() {
     console.log('Component is rendered');
     return (
-      <div>
+      <>
         <p>Unmounting Component</p>
-      </div>
+      </>
     );
   }
 }

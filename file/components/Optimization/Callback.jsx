@@ -8,10 +8,10 @@ function Callback() {
   }, [count]);
 
   return (
-    <div>
+    <>
       <Child handleClick={handleClick} />
       <p>Count: {count}</p>
-    </div>
+    </>
   );
 }
 export default Callback;

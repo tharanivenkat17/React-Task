@@ -1,15 +1,12 @@
 import React, { useRef, useState } from 'react';
 
 const Uncontrolled = () => {
-  // Use refs to get the form field values
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   
-  // State to manage error messages
   const [errors, setErrors] = useState({});
 
-  // Form validation function
   const validateForm = () => {
     const newErrors = {};
 
@@ -35,21 +32,18 @@ const Uncontrolled = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Form is valid, proceed with form submission logic
       console.log('Form submitted successfully');
       console.log(nameRef.current.value);
       console.log(emailRef.current.value);
       console.log(passwordRef.current.value);
 
-      // Reset form fields after successful submission
       nameRef.current.value = '';
       emailRef.current.value = '';
       passwordRef.current.value = '';
-      setErrors({}); // Clear errors
+      setErrors({});
     }
   };
 

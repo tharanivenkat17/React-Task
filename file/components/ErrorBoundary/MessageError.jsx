@@ -22,7 +22,7 @@ export default function MessageError({message, onSubmit}) {
   }
 
   if (crash) {
-    throw new Error("CRASHED");
+    throw new Error("APP CRASHED");
   }
 
   return (

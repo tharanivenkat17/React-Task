@@ -19,9 +19,9 @@ export class ClassMounting extends Component {
     render() {
         console.log('Component render');
         return (
-            <div>
+            <>
                 <h1>{this.state.count}</h1>
-            </div>
+            </>
         )
     }
 }

@@ -15,11 +15,11 @@ function Profilers() {
         console.log('Commit Time:', commitTime);
     }}
     >
-      <div>
+      <>
         <h1>Profiler</h1>
         <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Type Anything"
         />
-      </div>
+      </>
     </Profiler>
   );
 }

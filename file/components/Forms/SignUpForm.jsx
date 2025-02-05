@@ -77,7 +77,7 @@ const SignUpForm = () => {
     };
 
     return (
-        <div>
+        <>
             <h1>Controlled Forms</h1>
             <form  style={{marginLeft:"450px", textAlign:"left"}} onSubmit={submitForm} name="form" method='post'>
                 <table>
@@ -144,7 +144,7 @@ const SignUpForm = () => {
                     </tbody>
                 </table>
             </form>
-        </div>
+        </>
     );
 };
 

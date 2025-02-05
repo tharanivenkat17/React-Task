@@ -22,7 +22,7 @@ export default function Ref() {
         prevRef.current = input
     },[input])
   return (
-    <div>
+    <>
       <h1>Use Ref</h1>
         {/* No rendering */}
         {/* <h1>Count {count}</h1>
@@ -34,6 +34,6 @@ export default function Ref() {
         <input type='text' value={input} onChange={(e)=>setInput(e.target.value)}/>
         <h2>current value:: {input}</h2>
         <h2>Prev value: {prevRef.current}</h2>
-    </div>
+    </>
   )
 }

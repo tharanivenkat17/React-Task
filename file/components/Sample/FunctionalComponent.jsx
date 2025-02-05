@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FunctionalComponent(props) {
   return (
-    <div>
+    <>
         <h1>Function Component</h1>
             <table border="4" class="table">
                 <tr>
@@ -24,6 +24,6 @@ export default function FunctionalComponent(props) {
                     ))
                 }
             </table>
-    </div>
+    </>
   )
 }

@@ -9,9 +9,9 @@ const HOC = (Original) => {
     }
 
     return (
-      <div>
+      <>
         <Original number={count} change={changeCount} {...props} />
-      </div>
+      </>
     )
   }
 

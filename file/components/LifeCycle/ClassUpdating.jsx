@@ -20,10 +20,10 @@ class ClassUpdating extends Component {
   render() {
     console.log('Updating');
     return (
-      <div>
+      <>
         <h1>Count: {this.state.count}</h1>
         <button onClick={this.componentDidUpdate}>Increment</button>
-      </div>
+      </>
     );
   }
 }

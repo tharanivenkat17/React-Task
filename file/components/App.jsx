@@ -1,5 +1,4 @@
 import React, { Suspense, useState } from 'react'
-import Button from './Sample/Button.jsx'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
 import PropDrilling from './Hooks/PropDrilling.jsx'
@@ -14,13 +13,15 @@ import { ErrorBoundary } from 'react-error-boundary'
 import MessageError from './ErrorBoundary/MessageError.jsx'
 import Memo from './Optimization/Memo.jsx'
 import Callback from './Optimization/Callback.jsx'
-import CustomHook from './Hooks/CustomHook.jsx'
 import Profilers from './Profilers.jsx'
 import Withoutjsx from './Withoutjsx.jsx'
+import CustomHook from './CustomHook.jsx'
+import RenderProps from './RenderProps.jsx'
+
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
-//////////////////////////  resetErrorBoundary //////////////////////
+//////////////////////////  fallback  /////////////////////////
 
 // const ErrorFallBack =({error,resetErrorBoundary})=>{
 //   return(
@@ -48,94 +49,100 @@ import Withoutjsx from './Withoutjsx.jsx'
 
 function App() {
 
-//////////////////////// state recovery using resetErrorBoundary /////////////////////////////
+  //////////////////////// state recovery using resetErrorBoundary /////////////////////////////
   // const [message, setMessage] = useState("")
 
   // const handleSubmit = (newMessage) => {
   //   setMessage(newMessage);
   // }
 
-    // const employee = [
-    //   { id: 12345, name: 'Siva', phone: 7418876453, salary: 30000, location: 'Chennai' },
-    //   { id: 12234, name: 'Arun', phone: 7418337656, salary: 30000, location: 'Delhi' }
-    // ]
-      return (
-        <div style={{textAlign:"center"}}>
-          {/*            state recovery using resetErrorBoundary            */}
-          {/* <h1>state recovery using resetErrorBoundary</h1>
+  // const employee = [
+  //   { id: 12345, name: 'Siva', phone: 7418876453, salary: 30000, location: 'Chennai' },
+  //   { id: 12234, name: 'Arun', phone: 7418337656, salary: 30000, location: 'Delhi' }
+  // ]
+  return (
+    <div style={{ textAlign: "center" }}>
+      {/*            state recovery using resetErrorBoundary            */}
+      {/* <h1>state recovery using resetErrorBoundary</h1>
           <h2>Do not type "crash"</h2>
           <h3>{message}</h3>
           <div>
             <ErrorBoundary FallbackComponent={ErrorFallBackState} 
-            onReset={() => setMessage("")}
-            >
+              onReset={() => setMessage("")}>
               <MessageError message={message} onSubmit={handleSubmit} />
             </ErrorBoundary>
-          </div> */}
-          {/* <br /> */}
+          </div>
+      <br /> */}
 
-          {/*             Fallback          */}
-          {/* <h1>resetErrorBoundary</h1>
-          <ErrorBoundary FallbackComponent={ErrorFallBack}> 
-          <ErrorBoundaries/>
-          </ErrorBoundary>
-          <br /> */}
+      {/*             Fallback          */}
+      {/* <h1>resetErrorBoundary using FallbackComponent</h1>
+      <ErrorBoundary FallbackComponent={ErrorFallBack}>
+        <ErrorBoundaries />
+      </ErrorBoundary>
+      <br /> */}
 
-          {/*             fallbackRender               */}
-          {/* <h1>fallbackRender</h1>
-          <ErrorBoundary fallbackRender={({error,resetErrorBoundary}) =>{
-            return(
-              <>
-                <p>Something went wrong!</p>
-                <p>{error.message}</p>
-                <button onClick={resetErrorBoundary}>Try Again</button>
-              </>
-            )
-          }}>
-            <ErrorBoundaries/>
-          </ErrorBoundary> */}
+      {/*             fallbackRender               */}
+      {/* <h1>fallbackRender</h1>
+      <ErrorBoundary fallbackRender={({ error, resetErrorBoundary }) => {
+        return (
+          <>
+            <p>Something went wrong!</p>
+            <p>{error.message}</p>
+            <button onClick={resetErrorBoundary}>Try Again</button>
+          </>
+        )
+      }}>
+        <ErrorBoundaries />
+      </ErrorBoundary> 
+      <br /> */}
 
-          <br />
-          {/* <FunctionalComponent details={employee}></FunctionalComponent>
+
+      {/* <FunctionalComponent details={employee}></FunctionalComponent>
           <ClassComponent data={employee}></ClassComponent> */}
-          {/* <Demo name="Siva"></Demo> */}
+      {/* <Demo name="Siva"></Demo> */}
 
-          {/*                   FORMS                  */}
-          {/* <SignUpForm/>
+      {/*                   FORMS                  */}
+      {/* <SignUpForm/>
           <Uncontrolled/> */}
 
-          {/*                   HOOKS                  */}
-          {/* <Ref/>
+      {/*                   HOOKS                  */}
+      {/* <Ref/>
           <PropDrilling/>
           <Context/>
           <Effect/>  */}
 
-          {/*               HIGHER ORDER COMPONENT         */}
-          {/* <ButtonClick/>
+      {/*               HIGHER ORDER COMPONENT         */}
+      {/* <ButtonClick/>
           <FormHOC/> */}
 
-          {/*             LazyLoadingComponent         */}
-          {/* <Suspense fallback={<div>Loading...</div>}>
+      {/*             LazyLoadingComponent         */}
+      {/* <Suspense fallback={<div>Loading...</div>}>
             <LazyLoadingComponent/>
           </Suspense> */}
 
-          {/*            BUTTON and FRAGMENT           */}
-          {/* <Button/> */}
+      {/*            BUTTON and FRAGMENT           */}
+      {/* <Button/> */}
 
-          {/*             Optimizing Performance           */}
-          {/* <Memo/>
+      {/*             Optimizing Performance           */}
+      {/* <Memo/>
           <Callback/> */}
 
-          {/*             Render Props            */}
-          {/* <CustomHook /> */}
+      {/*             Render Props            */}
+      {/* <CustomHook /> */}
+      <RenderProps />
 
-          {/*             Profiler            */}
-          {/* <Profilers /> */}
+      {/*             Profiler            */}
+      {/* <Profilers /> */}
 
-          {/*             Without JSX            */}
-          <Withoutjsx />
-          
-        </div>
+      {/*             Without JSX            */}
+      {/* <Withoutjsx /> */}
+
+
+      {/*             Static Type Checking - Flow        */}
+      {/* <Flows /> */}
+
+
+    </div>
   )
 }
 
