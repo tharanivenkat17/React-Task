@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { StrictMode, Suspense, useState } from 'react'
 import SignUpForm from './Forms/SignUpForm.jsx'
 import Uncontrolled from './Forms/Uncontrolled.jsx'
 import PropDrilling from './Hooks/PropDrilling.jsx'
@@ -15,8 +15,9 @@ import Memo from './Optimization/Memo.jsx'
 import Callback from './Optimization/Callback.jsx'
 import Profilers from './Profilers.jsx'
 import Withoutjsx from './Withoutjsx.jsx'
-import CustomHook from './CustomHook.jsx'
-import RenderProps from './RenderProps.jsx'
+import CustomHook from './RenderProps/CustomHook.jsx'
+import RenderProps from './RenderProps/RenderProps.jsx'
+import Sample from './StrictMode.jsx'
 
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
@@ -124,12 +125,12 @@ function App() {
       {/* <Button/> */}
 
       {/*             Optimizing Performance           */}
-      {/* <Memo/>
-          <Callback/> */}
+      {/* <Memo/> */}
+          {/* <Callback/> */}
 
       {/*             Render Props            */}
       {/* <CustomHook /> */}
-      <RenderProps />
+      {/* <RenderProps /> */}
 
       {/*             Profiler            */}
       {/* <Profilers /> */}
@@ -137,11 +138,13 @@ function App() {
       {/*             Without JSX            */}
       {/* <Withoutjsx /> */}
 
-
       {/*             Static Type Checking - Flow        */}
       {/* <Flows /> */}
 
-
+      <StrictMode>
+          <Sample />
+      </StrictMode>
+      
     </div>
   )
 }

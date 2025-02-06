@@ -13,6 +13,7 @@ function Memo() {
 
   return (
     <>
+      <h1>Use Memo</h1>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
       <p>Count: {count}</p>
       <p>Memoized value (count * 2): {memoizedValue}</p>

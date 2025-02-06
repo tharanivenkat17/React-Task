@@ -18,6 +18,6 @@ export default Callback;
 
 function Child({ handleClick }) {
   console.log('Child rendered');
-  return <button onClick={handleClick}>Click me</button>;
+  return <button onClick={handleClick}>Increase Count</button>;
 }
 
