@@ -17,7 +17,8 @@ import Profilers from './Profilers.jsx'
 import Withoutjsx from './Withoutjsx.jsx'
 import CustomHook from './RenderProps/CustomHook.jsx'
 import RenderProps from './RenderProps/RenderProps.jsx'
-import Sample from './StrictMode.jsx'
+import Strict from './StrictMode.jsx'
+import UncontrolledComponent from './UncontrolledComponent.jsx'
 
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
@@ -141,10 +142,11 @@ function App() {
       {/*             Static Type Checking - Flow        */}
       {/* <Flows /> */}
 
-      <StrictMode>
-          <Sample />
-      </StrictMode>
-      
+      {/* <StrictMode> */}
+          {/* <Strict /> */}
+      {/* </StrictMode> */}
+      <UncontrolledComponent/>
+
     </div>
   )
 }

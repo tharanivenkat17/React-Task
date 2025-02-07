@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-function StrictMode() {  
+function Strict() {  
   
-  let reference = useRef(0)
+  let reference = useRef(0);
+  const [state, setState] = useState(0);
+
+  const handle = () =>{
+    setState(state+1);
+  }
   function handleChange() {
     reference.current = reference.current + 1;
     console.log(reference.current)
@@ -28,9 +33,11 @@ function StrictMode() {
   return (
     <div>
       <h1>Strict Mode</h1>
-      <button onClick={handleChange}>count</button>
+      <button onClick={handleChange}>count{reference.current}</button>
+      <button onClick={handle}>click{state}</button>
+
       <div>
-        {data ? (<pre>{JSON.stringify(data, null)}</pre>) : (<p>Loading data...</p>)}
+      {data ? (<pre>{JSON.stringify(data, null)}</pre>) : (<p>Loading data...</p>)}
       </div>
       <table border="1">
         <thead>
@@ -51,4 +58,4 @@ function StrictMode() {
     </div>
   )
 }
-export default StrictMode
+export default Strict
