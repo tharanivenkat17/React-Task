@@ -8,7 +8,7 @@ export default function Context() {
             <h1>Use Context Hook</h1>
             {/* Provider is to declare text as global */}
             <ValueContext.Provider value={text} >
-            <Component1  />
+            <Component1 />
             </ValueContext.Provider>
         </>
     )

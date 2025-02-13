@@ -19,7 +19,13 @@ import CustomHook from './RenderProps/CustomHook.jsx'
 import RenderProps from './RenderProps/RenderProps.jsx'
 import Strict from './StrictMode.jsx'
 import UncontrolledComponent from './UncontrolledComponent.jsx'
-
+import UseState from './Hooks/UseState.jsx'
+import InsideCondition from './RulesOfHooks/InsideCondition.jsx'
+import AfterCondition from './RulesOfHooks/AfterCondition.jsx'
+import EventHandle from './RulesOfHooks/EventHandle.jsx'
+import ClassComponent from './RulesOfHooks/ClassComponent.jsx'
+import TryCatch from './RulesOfHooks/TryCatch.jsx'
+import HookInsideHook from './RulesOfHooks/HookInsideHook.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -108,6 +114,7 @@ function App() {
           <Uncontrolled/> */}
 
       {/*                   HOOKS                  */}
+      {/* <UseState/> */}
       {/* <Ref/>
           <PropDrilling/>
           <Context/>
@@ -139,14 +146,21 @@ function App() {
       {/*             Without JSX            */}
       {/* <Withoutjsx /> */}
 
-      {/*             Static Type Checking - Flow        */}
-      {/* <Flows /> */}
-
+      {/*             Strict Mode        */}
       {/* <StrictMode> */}
           {/* <Strict /> */}
       {/* </StrictMode> */}
-      <UncontrolledComponent/>
 
+      {/*             UncontrolledComponent        */}
+      {/* <UncontrolledComponent/> */}
+
+      {/*             Rules Of Hooks        */}
+      {/* <InsideCondition/> */}
+      {/* <AfterCondition/> */}
+      {/* <EventHandle/> */}
+      {/* <ClassComponent/> */}
+      {/* <TryCatch/> */}
+      <HookInsideHook/>
     </div>
   )
 }
