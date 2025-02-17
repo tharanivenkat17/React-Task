@@ -26,6 +26,7 @@ import EventHandle from './RulesOfHooks/EventHandle.jsx'
 import ClassComponent from './RulesOfHooks/ClassComponent.jsx'
 import TryCatch from './RulesOfHooks/TryCatch.jsx'
 import HookInsideHook from './RulesOfHooks/HookInsideHook.jsx'
+import Counter from './Counter.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -155,12 +156,15 @@ function App() {
       {/* <UncontrolledComponent/> */}
 
       {/*             Rules Of Hooks        */}
-      {/* <InsideCondition/> */}
-      {/* <AfterCondition/> */}
-      {/* <EventHandle/> */}
-      {/* <ClassComponent/> */}
-      {/* <TryCatch/> */}
-      <HookInsideHook/>
+      {/* <InsideCondition/>
+      <AfterCondition/>
+      <EventHandle/>
+      <ClassComponent/>
+      <TryCatch/>
+      <HookInsideHook/> */}
+
+      {/*             Testing        */}
+      <Counter />
     </div>
   )
 }
