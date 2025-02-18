@@ -20,4 +20,3 @@ function Child({ handleClick }) {
   console.log('Child rendered');
   return <button onClick={handleClick}>Increase Count</button>;
 }
-

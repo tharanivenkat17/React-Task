@@ -27,6 +27,7 @@ import ClassComponent from './RulesOfHooks/ClassComponent.jsx'
 import TryCatch from './RulesOfHooks/TryCatch.jsx'
 import HookInsideHook from './RulesOfHooks/HookInsideHook.jsx'
 import Counter from './Counter.jsx'
+import ColorChange from './ColorChange.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -164,7 +165,9 @@ function App() {
       <HookInsideHook/> */}
 
       {/*             Testing        */}
-      <Counter />
+      {/* <Counter /> */}
+
+      <ColorChange />
     </div>
   )
 }
