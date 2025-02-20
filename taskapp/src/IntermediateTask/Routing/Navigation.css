@@ -1,0 +1,15 @@
+.nav{
+    display: flex;
+    background-color: #333333b0;
+    padding: 10px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+.nav a:hover{
+    background-color: rgb(102, 213, 176);
+    color: black;
+    font-weight: bolder;
+}

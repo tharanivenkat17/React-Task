@@ -1,22 +1,28 @@
+import ThemeToggle from './AdvanceTask/ThemeToggle';
 import './App.css';
-import Counter from './BasicTask/Counter';
-import Form from './BasicTask/Form';
-import HelloUser from './BasicTask/HelloUser';
-import TodoList from './IntermediateTask.jsx/TodoList';
-import Sample from './Sample';
+// import Navigation from './IntermediateTask/Routing/Navigation';
+// import FetchDataAPI from './IntermediateTask/FetchDataAPI';
+// import Counter from './BasicTask/Counter';
+// import Form from './BasicTask/Form';
+// import HelloUser from './BasicTask/HelloUser';
+// import TodoList from './IntermediateTask/TodoList';
 
 function App() {
-  const name = "Siva";
+  // const name = "Siva";
   return (
     <div>
-      {/* <Sample />
+      {/* 
       <h1> Basic Task </h1>
         <HelloUser name={name} />
         <Counter />
         <Form /> */}
+      {/* 
       <h1> Intermadiate Task</h1>
-        <TodoList />
-
+        <TodoList /> 
+        <FetchDataAPI />
+        <Navigation /> */}
+      <h1> Advance Task</h1>
+        <ThemeToggle />
     </div>
   );
 }
