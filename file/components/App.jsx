@@ -28,6 +28,8 @@ import TryCatch from './RulesOfHooks/TryCatch.jsx'
 import HookInsideHook from './RulesOfHooks/HookInsideHook.jsx'
 import Counter from './Counter.jsx'
 import ColorChange from './ColorChange.jsx'
+import Add from './Axios/Add.jsx'
+import Display from './Axios/Display.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -167,7 +169,11 @@ function App() {
       {/*             Testing        */}
       {/* <Counter /> */}
 
-      <ColorChange />
+      {/* <ColorChange /> */}
+
+      {/*             Axios        */}
+      <Add />
+      <div style={{paddingLeft: "40%",paddingTop: "4%"}}><Display /></div>
     </div>
   )
 }
