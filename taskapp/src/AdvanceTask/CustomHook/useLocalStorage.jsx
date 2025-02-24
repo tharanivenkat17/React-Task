@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // key - name of item in localStorage where value be saved
 const useLocalStorage = (key, initialValue) => {
