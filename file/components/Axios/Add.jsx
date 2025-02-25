@@ -12,10 +12,19 @@ function Add() {
             .then((response) =>{
                 if(response.data.length === 0){
                     axios.post(`http://localhost:5500/Data`,{data: datum})
-                    .then((responsePost) =>{
+                    .then(() =>{
                         alert('Added Data to Axios')
-                        setDatum();
+                        setDatum('');
                     })
+                }
+                else {
+                    const existingData = response.data[0];
+                    axios.put(`http://localhost:5500/Data/${existingData.id}`, { data: datum })
+                    // axios.patch(`http://localhost:5500/Data/${existingData.id}`, { data: datum })
+                        .then(() => {
+                            alert(`"${datum}" is already exist, So it is updated in Axios`);
+                            setDatum('');
+                        })
                 }
             })
     }
@@ -23,7 +32,7 @@ function Add() {
         <div>
             <h3>Add Data to Axios</h3>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="datum">Enter Data: </label>
+                <label htmlFor="datum">Enter Data to be Added: </label>
                 <input type="text" value={datum} required onChange={handleChange} /> &nbsp;
                 <button type='Submit'> Add</button>
             </form>

@@ -30,6 +30,7 @@ import Counter from './Counter.jsx'
 import ColorChange from './ColorChange.jsx'
 import Add from './Axios/Add.jsx'
 import Display from './Axios/Display.jsx'
+import Delete from './Axios/Delete.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -173,7 +174,8 @@ function App() {
 
       {/*             Axios        */}
       <Add />
-      <div style={{paddingLeft: "40%",paddingTop: "4%"}}><Display /></div>
+      <Delete />
+      <div style={{paddingLeft: "48%",paddingTop: "2%"}}><Display /></div>
     </div>
   )
 }
