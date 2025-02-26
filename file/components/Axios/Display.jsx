@@ -19,7 +19,7 @@ function Display() {
         return <div>{error}</div>
 
     return (
-        <>
+        <div>
             <table border={"solid black"}>
                 <thead>
                     <tr>
@@ -38,7 +38,7 @@ function Display() {
                     })}
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
 export default Display

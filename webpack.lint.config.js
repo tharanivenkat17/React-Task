@@ -1,5 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin'); 
 const path = require('path'); 
+const StyleLintPlugin = require("stylelint-webpack-plugin"); 
 
 module.exports = { 
   mode: 'development', 
@@ -35,7 +36,15 @@ module.exports = {
       template: './file/index.html', 
       filename: 'index.html', 
       inject: 'body', 
-    }),  ], 
+    }),
+    
+    new StyleLintPlugin({ 
+        files: "**/*.(css|scss|sass)", 
+        failOnError: false, 
+        emitErrors: true, 
+        quiet: false, 
+    }), 
+], 
 
   resolve: { 
     extensions: ['.js', '.jsx'], 
