@@ -19,11 +19,11 @@ function Display() {
         return <div>{error}</div>
 
     return (
-        <div>
+        <>
             <table border={"solid black"}>
                 <thead>
                     <tr>
-                        <td>S.No</td>
+                        <td>Id</td>
                         <td>Data</td>
                     </tr>
                 </thead>
@@ -38,7 +38,7 @@ function Display() {
                     })}
                 </tbody>
             </table>
-        </div>
+        </>
     )
 }
 export default Display
