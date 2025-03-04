@@ -32,6 +32,7 @@ import React from 'react'
 import Add from './Axios/Add.jsx'
 import Display from './Axios/Display.jsx'
 import Delete from './Axios/Delete.jsx'
+import UpdateUser from './Axios/UpdateUser.jsx'
 
 // const LazyLoadingComponent = React.lazy(()=>import("./LazyLoading.jsx"))
 
@@ -176,6 +177,7 @@ function App() {
       {/*             Axios        */}
       <Add />
       <Delete />
+      <UpdateUser />
       <div style={{paddingLeft: "48%",paddingTop: "2%"}}><Display /></div>
     </div>
   )

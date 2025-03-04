@@ -1,21 +1,27 @@
-h3{
-    font-size: 20px;
-    font-weight: bolder;
-    color: brown;
-    background-color: aquamarine;
-    padding: 1%;
+h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: brown;
+  background-color: aquamarine;
+  padding: 1%;
 }
 
-table{
-    background-color: blanchedalmond;
-    color: blue;
-    padding: 2px;
-    border: solid;
-    border-color: black;
+table {
+  background-color: blanchedalmond;
+  color: blue;
+  padding: 2px;
+  border: solid;
+  border-color: black;
 }
 
-td{
-    border-color: black;
-    border-width: 2px;
-    padding: 5px 10px;
+td {
+  border-color: black;
+  border-width: 2px;
+  padding: 5px 10px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-basis: content;
 }
