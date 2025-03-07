@@ -6,24 +6,23 @@ function FetchDataAPI() {
     const [error, setError] = useState('')
 
     useEffect(() => {
-
         const api = "https://jsonplaceholder.typicode.com/users"
-        fetch(api) 
-        .then(response => {    // then() - used to handle response once the promise resolves successfully
-            if (!response.ok) { 
-                throw new Error("Error in fetching the data")
-            }
-            return response.json() // if fetch successful, it will return json response
-        })
-        .then(data => {
-            setData(data) //  setData function - storing the fetched data in the component's state
-        })
-        .catch(error => {
-            setError(error.message) //  setError - error message to store it in the component's state
-        })
-     }, [])
-     
-     if(error)
+        fetch(api)
+            .then(response => {    // then() - used to handle response once the promise resolves successfully
+                if (!response.ok) {
+                    throw new Error("Error in fetching the data")
+                }
+                return response.json() // if fetch successful, it will return json response
+            })
+            .then(data => {
+                setData(data) //  setData function - storing the fetched data in the component's state
+            })
+            .catch(error => {
+                setError(error.message) //  setError - error message to store it in the component's state
+            })
+    }, [])
+
+    if (error)
         return <div>{error}</div>
 
     return (
@@ -42,7 +41,7 @@ function FetchDataAPI() {
                 </thead>
                 <tbody>
                     {data.map((datum) => {
-                        return(
+                        return (
                             <tr key={datum.id}>
                                 <td>{datum.name}</td>
                                 <td>{datum.username}</td>

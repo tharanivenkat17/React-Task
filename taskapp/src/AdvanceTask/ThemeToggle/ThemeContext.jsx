@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext()
-// creates a Context object, to share values between components without pass them through props manually
+// Context object to share values between components without pass them through props manually
 const ThemeProvider = ({children}) =>{
 // ThemeProvider component acts as wrapper for other components and provides theme state & toggle function
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")

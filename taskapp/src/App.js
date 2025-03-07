@@ -7,7 +7,8 @@ import { AuthProvider } from './AdvanceTask/Authentication/AuthContext';
 // import Counter from './BasicTask/Counter';
 // import Form from './BasicTask/Form';
 // import HelloUser from './BasicTask/HelloUser';
-// import TodoList from './IntermediateTask/TodoList';
+import React from 'react';
+import TodoList from './IntermediateTask/TodoList/TodoList';
 // import Form from "./AdvanceTask/CustomHook/Form";
 // import Performance from "./AdvanceTask/Performance/Performance";
 
@@ -22,9 +23,9 @@ function App() {
         <Counter />
         <Form /> */}
       {/* 
-      <h1> Intermadiate Task</h1>
+      <h1> Intermadiate Task</h1>*/}
         <TodoList /> 
-        <FetchDataAPI /> */}
+        {/* <FetchDataAPI />  */}
       {/* <Navigation />  */}
       {/* <h1> Advance Task</h1> */}
       {/* ------------------------- Theme Toggle ------------------------ */}
@@ -35,11 +36,11 @@ function App() {
       {/* <Form /> */}
       {/* ------------------- Performance Optimization ------------------- */}
       {/* <Performance /> */}
-      <AuthProvider>
+      {/* <AuthProvider>
         <Router>
           <Navigation />
         </Router>
-      </AuthProvider>
+      </AuthProvider> */}
     </div>
   );
 }
