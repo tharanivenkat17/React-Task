@@ -1,0 +1,50 @@
+.Body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Flex{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
+.Form{
+    padding-left: 40%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Form,input{
+    height: 20px;
+    width: 300px;
+    text-align: left;
+    margin: 5px 0;
+    font-size: 16px;
+}
+h3{
+    padding-left: 38%;
+    font-size: 20px;
+    color: rgb(92, 4, 65);
+}
+
+.button{
+    padding-left: 40%;
+}
+button{
+    padding: 5px 10px 5px 10px; 
+    font-size: 16px;
+    background-color: rgb(27, 81, 81);
+    color: white
+}
+button:hover{
+    color: black;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+span{
+    color: red;
+    font-weight: bolder;
+    background-color: rgba(99, 209, 209, 0.313);
+    text-align: center;
+}
