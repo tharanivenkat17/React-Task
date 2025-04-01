@@ -1,14 +1,17 @@
 // import ThemeProvider from './AdvanceTask/ThemeToggle/ThemeContext';
 // import ThemeToggle from './AdvanceTask/ThemeToggle/ThemeToggle';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navigation from './IntermediateTask/Routing/Navigation';
-import { AuthProvider } from './AdvanceTask/Authentication/AuthContext';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import Navigation from './IntermediateTask/Routing/Navigation';
+// import { AuthProvider } from './AdvanceTask/Authentication/AuthContext';
 // import FetchDataAPI from './IntermediateTask/FetchDataAPI';
 // import Counter from './BasicTask/Counter';
 // import Form from './BasicTask/Form';
 // import HelloUser from './BasicTask/HelloUser';
 import React from 'react';
-import TodoList from './IntermediateTask/TodoList/TodoList';
+import Signup from './Signup';
+import IntegrationUI from './IntegrationUI';
+// import TodoList from './IntermediateTask/TodoList/TodoList';
+// import SignUp from './AdvanceTask/Authentication/SignUp';
 // import Form from "./AdvanceTask/CustomHook/Form";
 // import Performance from "./AdvanceTask/Performance/Performance";
 
@@ -17,6 +20,8 @@ function App() {
   // const name = "Siva";
   return (
     <div>
+      <Signup />
+      <IntegrationUI />
       {/* 
       <h1> Basic Task </h1>
         <HelloUser name={name} />
@@ -24,7 +29,7 @@ function App() {
         <Form /> */}
       {/* 
       <h1> Intermadiate Task</h1>*/}
-        <TodoList /> 
+        {/* <TodoList />  */}
         {/* <FetchDataAPI />  */}
       {/* <Navigation />  */}
       {/* <h1> Advance Task</h1> */}
