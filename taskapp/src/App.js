@@ -8,8 +8,10 @@
 // import Form from './BasicTask/Form';
 // import HelloUser from './BasicTask/HelloUser';
 import React from 'react';
-import Signup from './Signup';
-import IntegrationUI from './IntegrationUI';
+import Signup from './react-hook-form/Signup';
+import IntegrationUI from './react-hook-form/IntegrationUI';
+import HandleErrors from './react-hook-form/HandleErrors';
+import APIServices from './react-hook-form/APIServices';
 // import TodoList from './IntermediateTask/TodoList/TodoList';
 // import SignUp from './AdvanceTask/Authentication/SignUp';
 // import Form from "./AdvanceTask/CustomHook/Form";
@@ -20,8 +22,10 @@ function App() {
   // const name = "Siva";
   return (
     <div>
-      <Signup />
-      <IntegrationUI />
+      {/* <Signup /> */}
+      {/* <IntegrationUI /> */}
+      <HandleErrors />
+      <APIServices />
       {/* 
       <h1> Basic Task </h1>
         <HelloUser name={name} />
